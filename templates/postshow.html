@@ -1,0 +1,29 @@
+<?php include "templates/header.html"; ?>
+
+
+<h2><?= htmlspecialchars($post->getTitle()) ?></h2>
+<p> <?= htmlspecialchars($post->getTextpost()) ?></p>
+
+<h3>Комментарии</h3>
+
+<div class="comments" >
+<?php foreach( $comments as $comment ): ?>
+	<div class="comment" >
+      <div class="comment-head">
+        <?= htmlspecialchars($comment->getName()) ?>  <?= htmlspecialchars($comment->getTimecomment()) ?>
+      </div>
+      <div class="comment-body">
+        <?= htmlspecialchars($comment->getTextcomment()) ?> 
+      </div>
+  </div>
+<?php endforeach; ?>
+</div>
+
+<p>Оставть комментарий:</p>
+<form method='post' action='' class="form-control input-group">
+	<input type='text' name='name'  maxlength="100" placeholder="Name" value="<?php if($logined):?><?= htmlspecialchars($user->getLogin())?><?php else: ?> noname <?php endif; ?>" >
+	 <textarea name='textcomment'maxlength="300" rows="8" placeholder="Ваш комментарий"></textarea>
+	<input type='submit' name="submitcom" value='Отправить' class="btn btn-primary">
+</form>
+
+<?php include "templates/footer.html"; ?>

@@ -1,0 +1,35 @@
+<?php include "templates/header.html"; ?>
+
+<?php if($logined):?> 
+    <h1>Ваши посты:</h1>
+	<table class="table table-bordered">
+		<tr>
+			<th>Title</th>
+		</tr> 
+
+		<?php foreach( $userposts as $post ): ?>
+			<tr>
+				<td><a href="?postid=<?= htmlspecialchars($post->getID())?>"><?= htmlspecialchars($post->getTitle()) ?></a> </td>   
+			</tr> 
+		<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+
+
+<h1>Все посты:</h1>
+
+
+<table class="table table-bordered">
+	<tr>
+		<th>Title</th>
+	</tr> 
+
+	<?php foreach( $posts as $post ): ?>
+		<tr>
+			<td><a href="?postid=<?= htmlspecialchars($post->getID())?>"><?= htmlspecialchars($post->getTitle()) ?></a> </td>   
+		</tr>
+	<?php endforeach; ?>
+</table>
+
+
+<?php include "templates/footer.html"; ?>

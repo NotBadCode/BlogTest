@@ -1,0 +1,19 @@
+
+.comments {
+	padding: 1em;
+	border: 2px solid black;
+}
+
+.comment {
+	border-bottom: 2px dashed black;
+}
+
+.comment-head {
+	color: red;
+}
+
+input {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	display: block;
+}

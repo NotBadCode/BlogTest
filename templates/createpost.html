@@ -1,0 +1,15 @@
+<?php include "templates/header.html"; ?>
+
+<h1>Добавить пост:</h1>
+
+<?php if($error=="title"):?> <p class="alert-danger" >Пустой Title</p><?php endif; ?>
+<?php if($error=="text"):?> <p class="alert-danger" > Пустой Text</p><?php endif; ?>
+
+<form class="form" method="post" action="createpost.php" class="form-horizontal">	
+	<input type="text" name="title" placeholder="Title"   value="">  
+	<textarea rows="10" cols="45" type="textarea" name="textpost" placeholder="Text" ></textarea>
+		
+	<input type="submit" name="submit" value="Создать" class="btn btn-primary">
+</form>
+
+<?php include "templates/footer.html"; ?>

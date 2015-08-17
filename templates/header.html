@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.php">В профиль</a>
+            <a href="posts.php">Список постов</a>
+            <?php if($logined):?> 
+                <a href="createpost.php">Добавить пост</a>
+            <?php endif; ?>
+        </nav>
+    </header>
+    
+    <div class="container">
