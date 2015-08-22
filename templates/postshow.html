@@ -1,8 +1,9 @@
 <?php include "templates/header.html"; ?>
 
-
-<h2><?= htmlspecialchars($post->getTitle()) ?></h2>
-<span> <?= htmlspecialchars($post->getTextpost()) ?></span>
+<div class="post">
+  <h2><?= htmlspecialchars($post->getTitle()) ?></h2>
+  <span> <?= htmlspecialchars($post->getTextpost()) ?></span>
+</div>
 
 <h3>Комментарии</h3>
 

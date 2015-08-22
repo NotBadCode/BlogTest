@@ -1,0 +1,33 @@
+body {
+  background-color: #d3d3d3;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+nav {
+  padding: 10px;
+  background-color: #ffffff;
+}
+nav a {
+  padding-left: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+h1 {
+  color: #000000;
+}
+table a {
+  margin-bottom: 3px;
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 1px dotted #000000;
+}
+.post {
+  padding: 1em;
+  border: 2px solid black;
+}
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
